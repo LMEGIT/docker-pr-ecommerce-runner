@@ -10,4 +10,4 @@ RUN apk update \
   && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi \
   && pip install boto3
 
-ENTRYPOINT [/bin/sh]
+ENTRYPOINT ["/bin/sh"]
