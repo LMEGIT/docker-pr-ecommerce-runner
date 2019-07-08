@@ -7,4 +7,7 @@ RUN apk update \
   && python3 -m ensurepip \
   && rm -r /usr/lib/python*/ensurepip \
   && pip3 install --no-cache --upgrade pip setuptools wheel \
-  && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
+  && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi \
+  && pip install boto3
+
+ENTRYPOINT [/bin/sh]
