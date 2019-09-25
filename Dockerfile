@@ -1,4 +1,4 @@
-FROM composer:1.8
+FROM composer:1.9
 
 RUN apk update \
   && apk add git rsync bash python3 \
